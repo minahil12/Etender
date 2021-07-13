@@ -1,6 +1,7 @@
 
 
 import React, { useCallback } from "react";
+import { ScrollView } from "react-native";
 import { View, Text, StyleSheet, Linking, TouchableOpacity,Image } from "react-native";
 
 const OpenURLButton = ({ url}) => {
@@ -22,16 +23,17 @@ const MyTenderBids = (props) => {
 
 
   return (
-    <View style={{backgroundColor:"white"}}>
-      <View style={styles.container1}>
-        <TouchableOpacity  onPress={() => props.navigation.navigate('myTenders')}><Text style={styles.hello}>back</Text></TouchableOpacity>
-      <Image
+    <View style={styles.container}>
      
-     source={require('../assets/logo.png')}
-style={styles.ImageIconStyle}
-           
-      />
-      </View>
+      <View style={styles.container1}>
+          <TouchableOpacity onPress={() => props.navigation.navigate('tenderDetails')}><Image
+
+            source={require('../assets/WArrow.png')}
+            style={styles.arrowImage}
+
+          /></TouchableOpacity>
+          <Text style={styles.etender}>E-tender</Text>
+        </View>
     
     <View style={styles.result}>
 
@@ -45,6 +47,7 @@ style={styles.ImageIconStyle}
 
 
     </View>
+    
     </View>
 
   );
@@ -57,7 +60,7 @@ style={styles.ImageIconStyle}
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-
+backgroundColor:"white",
     paddingTop: 40,
     paddingHorizontal: 10,
 
@@ -129,37 +132,35 @@ const styles = StyleSheet.create({
 
   },
   container1: {
-    backgroundColor: "white",
-    height: 150,
+    backgroundColor: "#050f2f",
+    height: 80,
     textAlign: "center",
     justifyContent: "flex-start",
-    alignContent: "flex-start"
+    alignContent: "flex-start",
+
+
   },
-  header:
-  {
-    color: "white",
-    marginTop: 20,
-    fontWeight: "bold",
-    fontSize: 30
-  }
-  ,
-  ImageIconStyle: {
-    //padding: 25,
-    //marginBottom:200,
-    height: 120,
-    width: 130,
+ 
+  etender: {
+
+    alignSelf: "center",
+    color: "#FFFFFF",
+    marginTop: "-9%",
+    fontSize: 30,
+    fontWeight: "bold"
+
+  },
+  arrowImage: {
+
+    height: 40,
+    width: 40,
     resizeMode: 'stretch',
-   marginTop:"1%",
-   alignSelf:"flex-end"
-   
 
 
-  },
-  hello:
-  {
-    fontSize:20,
-    marginLeft:"5%",
-    marginTop:"10%"
+    marginLeft: "2%",
+    marginTop: "5%",
+
+
   },
 })
 export default MyTenderBids;

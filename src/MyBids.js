@@ -46,14 +46,7 @@ const MyBids = ({ navigation }) => {
 
   const renderItem = ({ item }) => {
 
-    /* let mystr = organization
-     console.log(mystr)
-     var someStr = mystr;
-     let testOrganization = (someStr.toString().replace(/['"]+/g, ''));
- */
-
-
-    //if (item.postedBy === organization) 
+    
     {
       return (
         <View style={styles.result}>
@@ -78,14 +71,14 @@ const MyBids = ({ navigation }) => {
   return (
     <View style={styles.container} >
       <ScrollView>
-        <View style={styles.container1}>
-          <TouchableOpacity onPress={() => navigation.navigate('Main')}><Text style={styles.hello}>back</Text></TouchableOpacity>
-          <Image
+      <View style={styles.container1}>
+          <TouchableOpacity onPress={() => navigation.navigate('Main')}><Image
 
-            source={require('../assets/logo.png')}
-            style={styles.ImageIconStyle}
+            source={require('../assets/WArrow.png')}
+            style={styles.arrowImage}
 
-          />
+          /></TouchableOpacity>
+          <Text style={styles.etender}>E-tender</Text>
         </View>
 
         <Text style={{ marginTop: "10%", textAlign: "center", color: "#050f2f", fontSize: 30 }}>My Bids</Text>
@@ -140,29 +133,37 @@ const styles = StyleSheet.create({
   },
 
   container1: {
-    backgroundColor: "white",
-    height: 150,
+    backgroundColor: "#050f2f",
+    height: 80,
     textAlign: "center",
     justifyContent: "flex-start",
-    alignContent: "flex-start"
+    alignContent: "flex-start",
+
+
   },
-  ImageIconStyle: {
-    //padding: 25,
-    //marginBottom:200,
-    height: 120,
-    width: 130,
+ 
+  etender: {
+
+    alignSelf: "center",
+    color: "#FFFFFF",
+    marginTop: "-9%",
+    fontSize: 30,
+    fontWeight: "bold"
+
+  },
+  arrowImage: {
+
+    height: 40,
+    width: 40,
     resizeMode: 'stretch',
-    marginBottom: "200%",
-    alignSelf: "flex-end"
+
+
+    marginLeft: "2%",
+    marginTop: "5%",
 
 
   },
-  hello:
-  {
-    fontSize: 20,
-    marginLeft: "5%",
-    marginTop: "10%"
-  },
+ 
   title:
   {
 
