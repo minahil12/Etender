@@ -2,9 +2,9 @@
 
 import React, { useCallback } from "react";
 import { ScrollView } from "react-native";
-import { View, Text, StyleSheet, Linking, TouchableOpacity,Image } from "react-native";
+import { View, Text, StyleSheet, Linking, TouchableOpacity, Image } from "react-native";
 
-const OpenURLButton = ({ url}) => {
+const OpenURLButton = ({ url }) => {
   const handlePress = useCallback(async () => {
 
     await Linking.openURL(url);
@@ -17,37 +17,37 @@ const OpenURLButton = ({ url}) => {
 
 
 const MyTenderBids = (props) => {
-  
+
 
 
 
 
   return (
     <View style={styles.container}>
-     
+
       <View style={styles.container1}>
-          <TouchableOpacity onPress={() => props.navigation.navigate('tenderDetails')}><Image
+        <TouchableOpacity onPress={() => props.navigation.navigate('tenderDetails')}><Image
 
-            source={require('../assets/WArrow.png')}
-            style={styles.arrowImage}
+          source={require('../assets/WArrow.png')}
+          style={styles.arrowImage}
 
-          /></TouchableOpacity>
-          <Text style={styles.etender}>E-tender</Text>
-        </View>
-    
-    <View style={styles.result}>
+        /></TouchableOpacity>
+        <Text style={styles.etender}>E-tender</Text>
+      </View>
 
-      <Text style={styles.title}>Biding Details</Text>
-      <Text style={styles.text}> organization name: <Text style={styles.data}>{props?.route?.params?.item?.postedBy}</Text></Text>
-      <Text style={styles.text}> No. Of Days: <Text style={styles.data}>{props?.route?.params?.item?.no_of_days}</Text></Text>
-      <Text style={styles.text}> Contact: <Text style={styles.data}>{props?.route?.params?.item?.contact}</Text></Text>
-      <Text style={styles.text}> Status: <Text style={styles.data}>{props?.route?.params?.item?.status}</Text></Text>
+      <View style={styles.result}>
 
-      <OpenURLButton url={props?.route?.params?.item?.file_uploaded}></OpenURLButton>
+        <Text style={styles.title}>Biding Details</Text>
+        <Text style={styles.text}> organization name: <Text style={styles.data}>{props?.route?.params?.item?.postedBy}</Text></Text>
+        <Text style={styles.text}> No. Of Days: <Text style={styles.data}>{props?.route?.params?.item?.no_of_days}</Text></Text>
+        <Text style={styles.text}> Contact: <Text style={styles.data}>{props?.route?.params?.item?.contact}</Text></Text>
+        <Text style={styles.text}> Status: <Text style={styles.data}>{props?.route?.params?.item?.status}</Text></Text>
+
+        <OpenURLButton url={props?.route?.params?.item?.file_uploaded}></OpenURLButton>
 
 
-    </View>
-    
+      </View>
+
     </View>
 
   );
@@ -60,7 +60,7 @@ const MyTenderBids = (props) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-backgroundColor:"white",
+    backgroundColor: "white",
     paddingTop: 40,
     paddingHorizontal: 10,
 
@@ -71,7 +71,7 @@ backgroundColor:"white",
     backgroundColor: "white",
     width: 150,
     marginLeft: "30%",
-    marginTop:"3%"
+    marginTop: "3%"
   },
   result: {
     marginTop: 35,
@@ -120,17 +120,7 @@ backgroundColor:"white",
     fontWeight: "300"
 
   },
-  bids:
-  {
-    backgroundColor: "gray",
-    textAlign: "center",
-    borderRadius: 15,
-    justifyContent: "space-around",
-    borderWidth: 1,
-    borderColor: "#737373",
-    marginTop: 20,
 
-  },
   container1: {
     backgroundColor: "#050f2f",
     height: 80,
@@ -140,7 +130,7 @@ backgroundColor:"white",
 
 
   },
- 
+
   etender: {
 
     alignSelf: "center",

@@ -46,7 +46,7 @@ const MyBids = ({ navigation }) => {
 
   const renderItem = ({ item }) => {
 
-    
+
     {
       return (
         <View style={styles.result}>
@@ -71,7 +71,7 @@ const MyBids = ({ navigation }) => {
   return (
     <View style={styles.container} >
       <ScrollView>
-      <View style={styles.container1}>
+        <View style={styles.container1}>
           <TouchableOpacity onPress={() => navigation.navigate('Main')}><Image
 
             source={require('../assets/WArrow.png')}
@@ -141,7 +141,7 @@ const styles = StyleSheet.create({
 
 
   },
- 
+
   etender: {
 
     alignSelf: "center",
@@ -156,14 +156,12 @@ const styles = StyleSheet.create({
     height: 40,
     width: 40,
     resizeMode: 'stretch',
-
-
-    marginLeft: "2%",
+     marginLeft: "2%",
     marginTop: "5%",
 
 
   },
- 
+
   title:
   {
 

@@ -1,7 +1,7 @@
 
 
 import React, { useEffect, useState, useCallback } from "react";
-import { View, Text, StyleSheet, FlatList, Button, TouchableOpacity, Linking,Image } from "react-native";
+import { View, Text, StyleSheet, FlatList, Button, TouchableOpacity, Linking, Image } from "react-native";
 
 import axios from 'axios';
 import { ScrollView } from "react-native";
@@ -27,7 +27,7 @@ const BidDetails = (props) => {
     axios.get('https://etender-backend.herokuapp.com/api/publish-tender/').then(
       response => {
         settenders(response.data)
-        //show()
+        
 
 
       }).catch(
@@ -74,7 +74,7 @@ const BidDetails = (props) => {
   return (
     <View style={styles.container}>
       <ScrollView>
-      <View style={styles.container1}>
+        <View style={styles.container1}>
           <TouchableOpacity onPress={() => props.navigation.navigate('myBids')}><Image
 
             source={require('../assets/WArrow.png')}
@@ -83,33 +83,33 @@ const BidDetails = (props) => {
           /></TouchableOpacity>
           <Text style={styles.etender}>E-tender</Text>
         </View>
-      <View style={styles.result}>
+        <View style={styles.result}>
 
-        <Text style={styles.title}>Biding Details</Text>
-        <Text style={styles.text}> organization name: <Text style={styles.data}>{props?.route?.params?.item?.postedBy}</Text></Text>
-        <Text style={styles.text}> No. Of Days: <Text style={styles.data}>{props?.route?.params?.item?.no_of_days}</Text></Text>
-        <Text style={styles.text}> Contact: <Text style={styles.data}>{props?.route?.params?.item?.contact}</Text></Text>
-        <Text style={styles.text}> Status: <Text style={styles.data}>{props?.route?.params?.item?.status}</Text></Text>
-        <OpenURLButton url={props?.route?.params?.item?.file_uploaded}></OpenURLButton>
-
-
-
-      </View>
+          <Text style={styles.title}>Biding Details</Text>
+          <Text style={styles.text}> organization name: <Text style={styles.data}>{props?.route?.params?.item?.postedBy}</Text></Text>
+          <Text style={styles.text}> No. Of Days: <Text style={styles.data}>{props?.route?.params?.item?.no_of_days}</Text></Text>
+          <Text style={styles.text}> Contact: <Text style={styles.data}>{props?.route?.params?.item?.contact}</Text></Text>
+          <Text style={styles.text}> Status: <Text style={styles.data}>{props?.route?.params?.item?.status}</Text></Text>
+          <OpenURLButton url={props?.route?.params?.item?.file_uploaded}></OpenURLButton>
 
 
-      <View style={styles.bids}>
 
-        <Text style={{ color: "white", textAlign: "center" }} >Tender details on which this bid is placed</Text>
+        </View>
 
-      </View>
-      <FlatList style={styles}
 
-        data={tenders}
-        renderItem={renderItem}
-        keyExtractor={item => item.id.toString()}
-      />
+        <View style={styles.bids}>
 
-</ScrollView>
+          <Text style={{ color: "white", textAlign: "center" }} >Tender details on which this bid is placed</Text>
+
+        </View>
+        <FlatList style={styles}
+
+          data={tenders}
+          renderItem={renderItem}
+          keyExtractor={item => item.id.toString()}
+        />
+
+      </ScrollView>
     </View>
   );
 
@@ -121,7 +121,7 @@ const BidDetails = (props) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-backgroundColor:"white",
+    backgroundColor: "white",
     paddingTop: 40,
     paddingHorizontal: 10,
 
@@ -132,7 +132,7 @@ backgroundColor:"white",
     backgroundColor: "white",
     width: 150,
     marginLeft: "30%",
-    marginTop:"3%"
+    marginTop: "3%"
   },
   result: {
     marginTop: 35,
@@ -148,8 +148,6 @@ backgroundColor:"white",
     color: "white",
     marginLeft: 20,
     marginRight: 20,
-
-
     fontWeight: "bold",
     fontSize: 16,
   },
@@ -158,8 +156,6 @@ backgroundColor:"white",
     color: "#050f2f",
     marginLeft: 20,
     marginRight: 20,
-
-
     fontWeight: "bold",
     fontSize: 16,
   },
@@ -201,7 +197,7 @@ backgroundColor:"white",
 
 
   },
- 
+
   etender: {
 
     alignSelf: "center",
@@ -216,8 +212,6 @@ backgroundColor:"white",
     height: 40,
     width: 40,
     resizeMode: 'stretch',
-
-
     marginLeft: "2%",
     marginTop: "5%",
 

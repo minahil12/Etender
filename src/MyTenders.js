@@ -104,7 +104,7 @@ const MyTenders = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-backgroundColor:"white",
+    backgroundColor:"white",
     paddingTop: 40,
     paddingHorizontal: 10,
 
@@ -128,7 +128,6 @@ backgroundColor:"white",
     paddingRight: 20,
     paddingLeft: 20,
     backgroundColor: "#050f2f",
-
     alignContent: "stretch"
 
   },
@@ -163,19 +162,12 @@ backgroundColor:"white",
     height: 40,
     width: 40,
     resizeMode: 'stretch',
-
-
     marginLeft: "2%",
     marginTop: "5%",
 
 
   },
-  hello:
-  {
-    fontSize: 20,
-    marginLeft: "5%",
-    marginTop: "10%"
-  },
+ 
   title:
   {
 
@@ -188,7 +180,6 @@ titleStyle: {
   color: '#050f2f',
   textAlign:"center",
   marginTop:"20%",
-  
   fontWeight:"bold"
   
   

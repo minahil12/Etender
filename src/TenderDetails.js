@@ -223,16 +223,9 @@ const styles = StyleSheet.create({
 
 
   },
-  container1: {
-    backgroundColor: "#050f2f",
-    height: 80,
-    textAlign: "center",
-    justifyContent: "flex-start",
-    alignContent: "flex-start",
 
 
-  },
- 
+
   etender: {
 
     alignSelf: "center",
@@ -247,29 +240,6 @@ const styles = StyleSheet.create({
     height: 40,
     width: 40,
     resizeMode: 'stretch',
-
-
-    marginLeft: "2%",
-    marginTop: "5%",
-
-
-  },
-  etender: {
-
-    alignSelf: "center",
-    color: "#FFFFFF",
-    marginTop: "-9%",
-    fontSize: 30,
-    fontWeight: "bold"
-
-  },
-  arrowImage: {
-
-    height: 40,
-    width: 40,
-    resizeMode: 'stretch',
-
-
     marginLeft: "2%",
     marginTop: "5%",
 
